@@ -12,15 +12,38 @@
   img{
     width:100%;
     height:100%;
+    border-radius: 15px;
+  }
+  body{
+    background: rgba(199, 203, 204, 0.315)
   }
   
-  
-  div.carrusel{
+  .header{
+    background:rgb(16, 33, 185);
+    display: flex;
+    justify-content: center;
+    height:2rem;
+    margin: 0;
     width:100%;
+  }
+  .header span{
+    color:#fff;
+    font-size:24px;
+    font-weight: bolder;
+    text-shadow: 3px 1px 1px #000;
+    padding-top:5px;
+
+  }
+
+  div.carrusel{
+    width:80%;
     position:relative;
+    margin: 0 auto;
     padding:10px;
-    height:50vh;
-    max-height:200px;
+    height:60vh;
+    max-height:60vh;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #000;
   }
   .botones{
     width:35px;
@@ -28,7 +51,8 @@
     border-radius:50%;
     background-color:rgba(0,0,0,.3);
     text-align:center;
-    font-size:30px;
+    font-size:20px;
+    line-height: 35px;
     font-weight:bold;
     position:absolute;
     color:#fff;
@@ -38,19 +62,7 @@
     transition:all 0.3s ease;  
     top:45%;
   }
-  @media only screen and (min-width:326px){
-      div.carrusel{
-       max-height:100%;   
-       min-height:500px;
-  
-    }
-    .botones{
-      font-size:20px;
-      width:50px;
-      height:50px;
-      line-height:50px;
-    }
-  }
+
   
   .botones:hover{
     cursor:pointer;
@@ -61,4 +73,64 @@
   }
   .adelante{
     right:2%;
+  }
+
+  /****** Bolitas inferiores de slider *******/
+  .bolitas{
+    display: flex;
+    height: 2rem;
+    margin: 1.5% auto;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .bolitas>span{
+    width: 1rem;
+    height: 1rem;
+    background:#fff;
+    box-shadow:2px 1px 1px gray;
+    border:1px solid rgba(39, 23, 23, 0.699);
+    border-radius:50%;
+    margin:0 .2rem;
+  }
+
+  .bolitas>span:hover{
+    cursor: pointer;
+    background:rgba(226, 20, 20, 0.699);
+  }
+
+  .information{
+    width:78%;
+    margin: 3% auto;
+
+  }
+  .information>p{
+    text-align: justify;
+  }
+
+  /**** Medias queries *****/
+  @media only screen and (max-width:400px){
+    div.carrusel{
+        width: 100%;
+        height:35vh;
+        padding:5px 0;
+    }
+    .botones{
+        background: rgba(49, 189, 231, 0.4);
+        font-size:18px;
+        line-height: 38px;
+    }
+    .atras{
+      left:3.5%;
+    }
+    .adelante{
+      right:3.5%;
+    }
+    .information{
+      width:95%; 
+      margin: 7% auto;
+    }
+    .bolitas{
+      margin: 2% auto;
+    }
   }
